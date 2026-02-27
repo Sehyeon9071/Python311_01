@@ -3,7 +3,7 @@ total = 0
 
 while True:
     hakbun = input("학번을 입력하시오. : ")
-    if hakbun == "exit":
+    if hakbun.lower() == "exit":
         break
 
     std = {

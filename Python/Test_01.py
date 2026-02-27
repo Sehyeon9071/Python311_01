@@ -1,2 +1,3 @@
-a = set("apple")
-print(a)
+file = open("hello.txt", "w")
+file.write("Hello Python!!!")
+file.close()

@@ -4,7 +4,7 @@ grade = 0
 while True:
     std = []
     hakbun = input("학번을 입력하세요. : ")
-    if hakbun == "exit":
+    if hakbun.lower() == "exit":
         break
 
     name = input("이름을 입력하시오. : ")
