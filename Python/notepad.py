@@ -38,9 +38,9 @@ weapon_info = {
 
 player_weapon = random.choice(list(weapon_info.keys()))
 print(f"Player의 무기는 {player_weapon}입니다.")
-player_dmg = player_weapon["damage"]
+player_dmg = int(player_weapon["damage"])
 print(f"Player의 무기 데미지는 {player_dmg}입니다.")
-player_stamina = player_weapon["stamina"]
+player_stamina = int(player_weapon["stamina"])
 print(f"Player의 스테미너는 {player_stamina}입니다.")
 
 while True:
@@ -56,11 +56,13 @@ while True:
         print(f"Player 스테미너 : {player_stamina}")
         print("==================================")
         attack = int(input("공격하시려면 1을 입력하세요."))
+        end_game = int(input("종료하시려면 0을 입력하세요."))
 
         if attack == 1:
             monster_hp -= player_dmg
             player_stamina -= 10
-        elif:
-
+        elif end_game == 0:
+            print("게임을 종료합니다.")
+            break
         else:
-            print("잘못된 숫자를 입력하셨습니다.")
+            print("잘못된 입력입니다.")
