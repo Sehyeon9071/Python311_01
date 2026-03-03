@@ -4,7 +4,7 @@
 # 제품코드, 제품명, 수량, 단가를 입력받아 금액을 계산하여 출력하는 프로그램
 # 입력 받은 데이터는 sangpum_data.txt에 csv형식으로 저장
 
-fp = open("sangpum_data.txt", "w", encoding="UTF-8")    # w(write), r(read), a(append)
+fp = open("sangpum_data.txt", "w", encoding="UTF-8")    # w(write) => 쓰기, r(read) => 읽기, a(append) => 추가, b(binary) => 2진법
 
 lst = []
 

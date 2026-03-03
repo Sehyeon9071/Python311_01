@@ -1,15 +1,16 @@
-import os
+import os, csv
 
 if os.path.exists("sangpum_data.txt"):
-    fp = open("sangpum_data.txt", "r", encoding="UTF-8")
+    fp = open("sangpum_data.txt", "r", encoding="UTF=8", newline="")
+    reader = list(csv.reader(fp))
     lst = []
-    for line in fp:
+    for line in reader:
         dct = {}
-        res = line.strip("\n").split(", ")
-        dct["code"] = res[0]
-        dct["irum"] = res[1]
-        dct["su"] = int(res[2])
-        dct["price"] = int(res[3])
+        dct["code"] = line[0]
+        dct["irum"] = line[1]
+        dct["su"] = int(line[2])
+        dct["price"] = int(line[3])
+
         dct["kumack"] = dct["su"] * dct["price"]
         lst.append(dct)
 
